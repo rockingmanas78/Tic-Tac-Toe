@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #545454;
+}
+.container{
+    background: #3bbbdb;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    /* width: 500px;
+    height: 500px; */
+}
+.title{
+    font-family: 'Baloo Bhaina 2', cursive;
+    text-align: center;
+    /* margin: auto;
+    display: block; */
+}
+.title span{
+    color: azure;
+}
+.status-action{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(109, 107, 184);
+    margin-top: 25px;
+    font-size: 25px;
+    height: 30px;
+}
+.status span {
+    color: #F2EBD3;
+}
+.reset{
+    cursor: pointer;
+}
+.reset:hover
+{
+    color: azure;
+}
+.game-grid{
+    background: #0c8b98;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+.game-cell {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    cursor: pointer;
+    background: #3bbbdb;
+}
+.game-cell:hover
+{
+    background: #b1dae4;
+
+}
+.x,
+.o{
+    cursor: default;
+}
+.x::before{
+    content: 'X';
+    font-size: 200px;
+    font-family: 'Architects Daughter', cursive;;
+}
+.o::before{
+    content: 'O';
+    font-size: 200px;
+    color: aliceblue;
+    font-family: 'Architects Daughter', cursive;;
+}
+.won::before{
+    color:#BD022F;
+}
+@media only screen and (max-width: 1824px){
+    .game-grid{
+        margin-top: 25px;
+        grid-gap: 10px;
+    }
+    .game-cell{
+        height: 150px;
+        width: 150px;
+    }
+    .x::before{
+        font-size: 150px;
+    }
+    .o::before{
+        font-size: 150px;
+    }
+}
+@media only screen and (max-width: 548px){
+    .container{
+        margin: 25px;
+        padding: 25px;
+    }
+    /* .game-grid{
+        margin-top: 25px;
+        grid-gap: 10px;
+    } */
+    .game-cell{
+        height: 100px;
+        width: 100px;
+    }
+    .x::before{
+        font-size: 100px;
+    }
+    .o::before{
+        font-size: 100px;
+    }
+}
